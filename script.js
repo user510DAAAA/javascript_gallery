@@ -1,17 +1,25 @@
-// JavaScript
-//console.log('Hello world!');
-const main = document.querySelector('#main-image');
-const thumbs = document.querySelectorAll('.thumb');
+// Smooth Scrool Sample
 
-// 確認
-//console.log(main);
-//console.log(thumbs);
-const text = document.querySelector('#caption');
-thumbs.forEach(function(item, index) {
-    item.onmouseover = function() {
-      //console.log(this.dataset.image);
-      main.src = this.dataset.image;
-      text.textContent = this.title;
-    }
-  });
-  
+$(function(){
+
+    $('a[href^="#"]').click(function() {
+ 
+       // 初期設定：移動時間(ms)と頭出し位置
+       var speed = 500;
+       var offset = -0;
+ 
+       // アンカーを取得
+       var anchor = $(this).attr("href");
+ 
+       // ターゲットの位置を取得
+       var target = $(anchor == "#" || anchor == "" ? 'html' : anchor);
+       var position = target.offset().top + offset;
+ 
+       // スクロール（アニメーション）
+       $('body,html').animate({scrollTop:position}, speed, 'swing');
+ 
+       return false;
+ 
+    });
+ 
+ })

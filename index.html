@@ -2,42 +2,103 @@
 <html lang="ja">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>JavaScript Sample</title>
+  <meta charset="utf-8" />
+  <!-- jQueryの読み込み -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" 
+          integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" 
+          crossorigin="anonymous"></script>
+  <!-- 外部JavaScriptファイルの読み込み -->
+  <script src="script.js"></script>
+  <!-- 外部CSSファイルの読み込み -->
   <link rel="stylesheet" href="style.css">
-  <script src="script.js" defer></script>
+  <title>Foliage Plant</title>
 </head>
 
 <body>
-  <header>
-    <h1>Photo Gallery</h1>
-  </header>
-  <main>
-    <div class="gallery">
-      <div>
-        <img src="images/img01.png" id="main-image" alt="img01" title="img01">
-        <p id="caption">img01</p>
-      </div>
-      <ul>
-        <li><img src="images/img01.png" alt="img01" title="img01" class="thumb" data-image="images/img01.png"></li>
-        <li><img src="images/img02.png" alt="img02" title="img02" class="thumb" data-image="images/img02.png"></li>
-        <li><img src="images/img03.png" alt="img03" title="img03" class="thumb" data-image="images/img03.png"></li>
-        <li><img src="images/img04.png" alt="img04" title="img04" class="thumb" data-image="images/img04.png"></li>
-        <li><img src="images/img05.png" alt="img05" title="img05" class="thumb" data-image="images/img05.png"></li>
-        <li><img src="images/img06.png" alt="img06" title="img06" class="thumb" data-image="images/img06.png"></li>
-        <li><img src="images/img07.png" alt="img07" title="img07" class="thumb" data-image="images/img07.png"></li>
-        <li><img src="images/img08.png" alt="img08" title="img08" class="thumb" data-image="images/img08.png"></li>
-        <li><img src="images/img09.png" alt="img09" title="img09" class="thumb" data-image="images/img09.png"></li>
-        <li><img src="images/img10.png" alt="img10" title="img10" class="thumb" data-image="images/img10.png"></li>
-        <li><img src="images/img11.png" alt="img11" title="img11" class="thumb" data-image="images/img11.png"></li>
-        <li><img src="images/img12.png" alt="img12" title="img12" class="thumb" data-image="images/img12.png"></li>
-      </ul>
-    </div>
-  </main>
-  <footer>
-    <p>© SampleSite</p>
-  </footer>
+
+  <div id="wrap">
+
+    <!-- ヘッダーセクション -->
+    <header>
+      <h1>Foliage Plant</h1>
+      <nav>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#work">Work</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- ホームセクション -->
+    <section id="home">
+      <h2></h2>
+      <font size="4.5"><center><p>
+        Foliage Plant<br>
+        植物はどのように空間に溶け込み効果を与えるか<br>
+        <br>
+      </font></center><p>
+        <img src="p1.JPG" width="600" height="550" style="display: block; margin: 0 auto;">
+      </p>
+    </section>
+
+    <!-- アバウトセクション -->
+    <section id="about">
+      <h2>About</h2>
+      <p>
+        ・植物がどのような効果を人に与え、空間ごとにどのようなスタイルの植物が合うのか？<br>
+        ・生活する場所では雰囲気や精神に影響を与える<br>
+        ・その場所に適したデザインやインテリアは快適性や集中力向上にも影響を与える。<br>
+        ・インテリアデザインはメンタルに与える影響がある<br>
+        ・ドライフラワーは落ち着きと癒し、周りのものに高級感や雰囲気をがらりと変えられる。<br>
+        <p>&nbsp;&nbsp;&nbsp;</p>
+        <p>&nbsp;&nbsp;&nbsp;</p>
+        <body>
+
+            <div class="image-container">
+                <!-- 1枚目の画像とテキスト -->
+                <div class="image-wrapper">
+                    <img src="p1.JPG" width="320" height="300" alt="成功例">
+                    <div class="text-on-image">成功例</div>
+                </div>
+        
+                <!-- 2枚目の画像とテキスト -->
+                <div class="image-wrapper">
+                    <img src="sippai1.jpg" width="370" height="300" alt="失敗例">
+                    <div class="text-on-image">失敗例</div>
+                </div>
+            </div>
+        
+        </body>
+      </p>
+    </section>
+
+    <!-- ワークセクション -->
+    <section id="work">
+        
+      <h2>Work</h2>
+      <p style="text-align: center;">
+        <p>&nbsp;&nbsp;&nbsp;</p>
+
+        <img src="p1.JPG" width="320" height="300">
+        <img src="p2.JPG" width="250" height="260">
+        <img src="p3.JPG" width="210" height="250">
+        <img src="p4.JPG" width="190" height="250">
+        <img src="p5.JPG" width="200" height="250">
+        <img src="p6.jpg" width="250" height="200">
+        <img src="p7.JPG" width="250" height="200">
+        <img src="p8.JPG" width="250" height="200">
+        <img src="p9.JPG" width="250" height="200">
+      </p>
+    </section>
+
+    <!-- フッターセクション -->
+    <footer>
+      &copy; YourName <a href="http://www.example.com">http://www.example.com</a>
+    </footer>
+
+  </div>
+
 </body>
 
 </html>
